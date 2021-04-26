@@ -15,30 +15,30 @@ class MyApp extends StatelessWidget {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    CustomSection(color: Colors.black),
-                    CustomSection(color: Colors.green),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    CustomSection(color: Colors.teal),
-                    CustomSection(color: Colors.brown),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    CustomSection(color: Colors.blue),
-                    CustomSection(color: Colors.orange),
-                  ],
-                ),
+                CustomRow(
+                    color1: Colors.deepPurple, color2: Colors.greenAccent),
+                CustomRow(color1: Colors.lime, color2: Colors.brown),
+                CustomRow(color1: Colors.deepOrange, color2: Colors.lightBlue),
               ]),
         ),
       ),
+    );
+  }
+}
+
+class CustomRow extends StatelessWidget {
+  final Color color1;
+  final Color color2;
+  CustomRow({this.color1, this.color2});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        CustomSection(color: color1),
+        CustomSection(color: color2),
+      ],
     );
   }
 }
