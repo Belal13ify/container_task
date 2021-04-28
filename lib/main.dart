@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
+          color: Color(0xff99d7f0),
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                CustomRow(
-                    color1: Colors.deepPurple, color2: Colors.greenAccent),
-                CustomRow(color1: Colors.lime, color2: Colors.brown),
-                CustomRow(color1: Colors.deepOrange, color2: Colors.lightBlue),
+                CustomRow(color1: Colors.green, color2: Colors.blue),
+                CustomRow(color1: Colors.red, color2: Colors.yellow),
+                CustomRow(color1: Colors.orange, color2: Colors.brown),
               ]),
         ),
       ),
